@@ -1,0 +1,1 @@
+alert("Cargando archivo javascrpt externo");

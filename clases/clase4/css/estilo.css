@@ -1,0 +1,19 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.caja{
+	background: #327667;
+	padding: 1em;
+	width: 150px;
+	height: 150px;
+	float: left;
+	margin: 16px;
+}
+h1{
+	color: white;
+}
+p{
+	font-style: italic;
+	font-weight: bold;
+}
