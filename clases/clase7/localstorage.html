@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Almacenamiento Local</title>
+</head>
+<body>
+	<input type="text" id="nombre" placeholder="Ingrese nombre de archivo" required> <br>
+	<textarea id="tarea" cols="30" rows="10" placeholder="Ingrese su tarea"></textarea> <br>
+	<input type="button" value="Guardar" onclick="guardar()">
+	<input type="button" value="Abrir" onclick="abrir()">
+	<script>
+	function guardar() {
+		var nombre = document.getElementById("nombre").value;
+		var tarea = document.getElementById("tarea").value;
+		localStorage.setItem(nombre, tarea);		
+	}
+
+	function abrir() {
+		var nombre = document.getElementById("nombre").value;
+		document.getElementById("tarea").value = localStorage.getItem(nombre)
+	}
+	</script>
+</body>
+</html>

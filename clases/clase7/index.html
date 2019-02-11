@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM</title>
+	<script type="text/javascript" src="./js/script.js" defer></script>
+</head>
+<body>
+	<h1>Document Object Model (DOM)</h1>
+	<p id="parrafo1">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, voluptates debitis, quia magni totam incidunt aspernatur suscipit laboriosam ea nostrum dolores tempora voluptas praesentium labore omnis dignissimos quod qui nisi!
+	</p>
+	<p id="parrafo2">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptate, rerum praesentium assumenda reprehenderit, nihil consectetur cum. Ut deleniti quas quis. Debitis, obcaecati. Recusandae odit ab rem explicabo quam sit!
+	</p>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptate, rerum praesentium assumenda reprehenderit, nihil consectetur cum. Ut deleniti quas quis. Debitis, obcaecati. Recusandae odit ab rem explicabo quam sit!
+	</p>
+	<div id="p5">
+		
+	</div>
+
+	
+	<script>
+		//1. Crear el elemento (createElement)
+		var p3 = document.createElement("p")
+		//2. Crear un nodo de texto(createTextNode)
+		var t = document.createTextNode("Nuevo texto en javascrip")
+		//3. Añadir el nodo de texto al elemento (AppendChild)
+		p3.appendChild(t)
+		//4. Agregar atributos al elemento("align", "center")
+		p3.setAttribute("align", "center")
+		//5. Agregar el elemento a nuestro documento (getElementById)
+		//document.body.innerHTML = p3.innerHTML
+		document.getElementById("p5").append(p3)
+	</script>
+</body>
+</html>

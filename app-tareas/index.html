@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>App</title>
+</head>
+<body>
+
+	<div class="nuevo">
+		<input type="text" id="titulo" placeholder="Ej. Trotar"><br>
+		<textarea id="tarea" cols="30" rows="10" placeholder=" ej. Tengo que trotar el dia de mañana"></textarea><br>
+		<input type="button" value="Guardar" onclick="Guardar()">
+		<input type="button" value="Listar" onclick="Listar()">
+	</div>
+
+	<div class="lista" id="lista">
+		
+	</div>	
+
+	<script type="text/javascript">
+		var nombre = "tareas"
+		function Guardar () {
+			var json="";
+			var titulo = document.getElementById('titulo').value
+			var tarea = document.getElementById('tarea').value
+			var objs = localStorage.getItem(nombre)+""
+
+			if (objs == 'null') {
+				json = '{"titulo":"'+titulo+'","tarea":"'+tarea+'"}'
+			}else{
+				json = objs+',{"titulo":"'+titulo+'","tarea":"'+tarea+'"}'
+			}			
+			localStorage.setItem(nombre, json)
+
+			Listar()
+		}
+
+
+		function Listar () {
+			var lista_tareas = document.getElementById('lista')
+			lista_tareas.innerHTML = '';
+
+			var json = localStorage.getItem(nombre)+""
+			if (json != 'null') {
+				obj = JSON.parse('['+json+']');
+				
+				for (var i = 0; i < obj.length; i++) {
+					var titulo = obj[i].titulo
+					var tarea = obj[i].tarea
+					lista_tareas.innerHTML += '<h3>'+ titulo +'</h3> <p>'+ tarea +'</p>'
+				};
+
+			}else{
+				lista_tareas.innerHTML='<h2>No hay tareas guardadas</h2>'
+			}
+		}
+
+		Listar();
+	</script>
+	
+</body>
+</html>

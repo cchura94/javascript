@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Onkeypres</title>
+</head>
+<body>
+	<input type="text" id="nombre" placeholder="Ingrese su nombre" onkeyUp="nombre()">
+	<h1>Mi nombre es: </h1>
+	<h2 id="texto" style="border:1px solid #00F;"></h2>
+	
+	<p>Computadora</p>
+	<p>costo: Bs. 25</p>
+	<input type="text" id="cantidad" placeholder="Ingrese su cantidad" onkeyUp="calcular()" value="1">
+	<p>Costo Total: Bs. <span id="costo" style="color:blue">25</span> </p>
+	
+	<script type="text/javascript">
+		function nombre() {
+			var n = document.getElementById("nombre").value;
+			//console.log(n)
+			document.getElementById("texto").innerHTML = n
+		}
+
+		function calcular(){
+			var cant = document.getElementById("cantidad").value;
+			var costo_total = cant * 25
+			document.getElementById("costo").innerHTML=costo_total
+		}
+
+
+	</script>
+</body>
+</html>

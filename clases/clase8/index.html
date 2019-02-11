@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Eventos</title>
+	<script type="text/javascript" src="./js/script.js" defer></script>
+</head>
+<body>
+	<h1>Eventos en JavaScript</h1>
+	<input type="button" onclick="alert('Hola Mundo!!')" value="Click">
+	<input type="button" onclick="mensaje('Este es mi mensaje')" value="Click personalizado">
+	<button onclick="mensaje('Este evento es de click 3')">Click 3</button>
+	<div onclick="mensaje('Este evento es de click 3')" class="caja" style="width:100px;height:100px;background:#F00;">
+		<h5>Presioname</h5>
+		<p>Onclick</p>
+	</div>
+	<div onmouseover="alert('Mouse')" class="caja2" style="width:100px;height:100px;background:green;">
+		<h5>Mouse</h5>
+		<p>onmouseover</p>		
+	</div>
+	<div onmouseout="alert('Saliendo')" class="caja2" style="width:100px;height:100px;background:blue;">
+		<h5>Mouse</h5>
+		<p>onmouseout</p>		
+	</div>
+	<div onkeypress="alert('Mouse')" class="caja2" style="width:100px;height:100px;background:green;">
+		<h5>Teclado</h5>
+		<p>onkeypress</p>		
+	</div>
+	<input type="text" onkeypress="alert('Teclado')">
+	
+</body>
+</html>

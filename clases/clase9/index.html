@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Objetos</title>
+</head>
+<body>
+
+
+
+	<script>
+		var texto = '[{"nombre":"Juan","apellido":"Mamani Algo"},{"nombre":"Oscar","apellido":"Algo Mamani"},{"nombre":"Ana","apellido":"Chavez"},{"nombre":"Pedro","apellido":"lo que sea"},{"nombre":"Maria","apellido":"a"},{"nombre":"Oscar","apellido":"mi apellido"}]'
+		var obj = JSON.parse(texto)
+		document.write("<table border=1>")
+		document.write("<tr style='background:#87f86f'><td>Nombre</td> <td>Apellido</td></tr>")
+		for (var i = 0; i < obj.length; i++) {		
+		document.write("<tr><td>"+obj[i].nombre+"</td><td>"+obj[i].apellido+"</td></tr>")
+		};
+		document.write("</table>")
+		
+		alert(obj[0].nombre + " " + obj[0].apellido)
+	</script>
+	
+</body>
+</html>
