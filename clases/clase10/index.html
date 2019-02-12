@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Consumo datos json</title>
+	<!--script type="text/javascript">
+		fetch("https://randomuser.me/api/?results=40").then((respuesta) =>{
+			return respuesta.json();
+		}).then((respuesta)=>{
+			console.log(respuesta.results[0].picture)
+			var personas;
+			for (var i = 1; i < respuesta.results.length; i++) {
+					var genero = respuesta.results[i].gender
+					var nombre = respuesta.results[i].name.first
+					var apellido = respuesta.results[i].name.last
+					var titulo = respuesta.results[i].name.title
+
+			
+			personas += "<p>"+genero+" "+nombre+" "+apellido+" "+titulo+"</p><img src='"+ respuesta.results[i].picture.thumbnail +"'>"
+
+
+				};
+
+		document.getElementById('lista-personas').innerHTML = personas 
+
+
+		})
+
+	</script-->
+	<script type="text/javascript">
+fetch("https://datos.gob.bo/dataset/a1ab65be-4160-494f-8eea-dddb1a04287d/resource/62a9416b-00af-446c-8606-3062c0bbd503/download/me_establecimientos_educativos2016.geojson").then((respuesta) =>{
+			return respuesta.json();
+		}).then((respuesta)=>{
+			console.log()
+			var colegio = respuesta.features[20].properties.UNIDAD_EDU;
+			alert(colegio)
+			
+		})
+	</script>
+</head>
+<body>
+	<div id="lista-personas">
+		
+	</div>
+	
+</body>
+</html>
